@@ -1,0 +1,18 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer components {
+    .btn {
+        @apply border inline-flex outline-none font-medium active:border-gray-200 focus:border-gray-400 border-gray-300 bg-white hover:bg-gray-50 rounded-lg px-4 py-2 shadow-sm transition-colors duration-75 active:scale-[0.99] active:shadow-none;
+    }
+    .btn.xs {
+        @apply py-1.5 px-2.5 text-xs;
+    }
+    .btn-primary {
+        @apply border-primary-500 active:border-primary-400 focus:border-primary-600 bg-primary-500 hover:bg-primary-600 hover:border-primary-600 text-white;
+    }
+    .btn-danger {
+        @apply border-red-500 active:border-red-400 focus:border-red-600 bg-red-500 hover:bg-red-600 hover:border-red-600 text-white;
+    }
+}
