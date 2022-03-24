@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Pages\SubscribePage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,8 @@ Route::redirect('/', 'dashboard');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('subscribe', SubscribePage::class)->name('subscribe');
+Route::get('subscribed', function () {
+    return 'Obrigado!';
+})->name('subscribed');

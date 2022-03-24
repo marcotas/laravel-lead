@@ -11,6 +11,9 @@
 |
 */
 
+use Pest\PendingObjects\TestCall;
+use Tests\TestCase;
+
 uses(Tests\TestCase::class)->in('Feature');
 
 /*
@@ -39,7 +42,10 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+/**
+ * @return TestCall|TestCase|mixed
+ */
+function this()
 {
-    // ..
+    return test();
 }
