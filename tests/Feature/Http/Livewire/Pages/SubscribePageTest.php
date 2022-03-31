@@ -47,7 +47,7 @@ it('it stores name and email in the subscribers table', function () {
         ->set('email', 'marco@mail.com')
         ->call('subscribe')
         ->assertHasNoErrors()
-        ->assertRedirect(route('subscribed'));
+        ->assertRedirect(route('subscribed', ['name' => 'Marco']));
 
     assertDatabaseHas('subscribers', [
         'name' => 'Marco',
@@ -65,7 +65,7 @@ it('it ignores existing emails displaying success page anyways', function () {
         ->set('email', $subscriber->email)
         ->call('subscribe')
         ->assertHasNoErrors()
-        ->assertRedirect(route('subscribed'));
+        ->assertRedirect(route('subscribed', ['name' => 'Marco']));
 
     assertDatabaseCount('subscribers', 1);
     assertDatabaseHas('subscribers', [
