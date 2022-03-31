@@ -21,6 +21,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('subscribe', SubscribePage::class)->name('subscribe');
-Route::get('subscribed', function () {
-    return 'Obrigado!';
-})->name('subscribed');
+Route::view('subscribed', 'subscribed')->name('subscribed');

@@ -4,7 +4,7 @@
 
 @layer components {
     .btn {
-        @apply border inline-flex outline-none font-medium active:border-gray-200 focus:border-gray-400 border-gray-300 bg-white hover:bg-gray-50 rounded-lg px-4 py-2 shadow-sm transition-colors duration-75 active:scale-[0.99] active:shadow-none;
+        @apply border inline-flex flex-shrink-0 items-center outline-none font-medium active:border-gray-200 focus:border-gray-400 border-gray-300 bg-white hover:bg-gray-50 rounded-lg px-4 py-2 shadow-sm transition-colors duration-75 active:scale-[0.99] active:shadow-none;
     }
     .btn.xs {
         @apply py-1.5 px-2.5 text-xs;

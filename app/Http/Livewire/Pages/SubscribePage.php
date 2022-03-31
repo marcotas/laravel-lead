@@ -23,7 +23,7 @@ class SubscribePage extends Component
             Subscriber::create($attributes);
         }
 
-        return redirect('subscribed');
+        return redirect()->route('subscribed', [ 'name' => $attributes['name'] ]);
     }
 
     public function render()
